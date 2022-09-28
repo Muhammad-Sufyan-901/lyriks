@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import Error from "./Error";
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
   const artist = artistData?.artists[artistId]?.attributes;
 
-  console.log(artistData?.artists);
-  console.log(artistId);
+  if (artist === undefined || songData === undefined) return <Error />;
 
   return (
     <div className="relative w-full flex flex-col">

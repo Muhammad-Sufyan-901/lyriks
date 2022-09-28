@@ -78,7 +78,7 @@ const TopPlay = () => {
         </div>
 
         <Swiper modules={[FreeMode]} spaceBetween={15} slidesPerView="auto" className="mt-4" freeMode centeredSlides centeredSlidesBounds>
-          {topPlays?.map((song, index) => (
+          {topPlays?.map((song) => (
             <SwiperSlide key={song?.key} style={{ width: "25%", height: "auto" }} className="shadow-lg rounded-full animate-slideright">
               <Link to={`/artists/${song?.artists[0].adamid}`}>
                 <img src={song?.images.background} alt="Top Artists Banner" className="rounded-full w-full object-cover" />
