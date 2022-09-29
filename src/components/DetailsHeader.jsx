@@ -4,7 +4,10 @@ import Error from "./Error";
 const DetailsHeader = ({ artistId, artistData, songData }) => {
   const artist = artistData?.artists[artistId]?.attributes;
 
-  if (artist === undefined || songData === undefined) return <Error />;
+  console.log(artist);
+  console.log(songData);
+
+  if (artist === undefined && songData === undefined) return <Error />;
 
   return (
     <div className="relative w-full flex flex-col">
